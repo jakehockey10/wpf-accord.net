@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:controls="clr-namespace:Accord.Controls;assembly=Accord.Controls.Imaging"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
@@ -15,8 +14,9 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Button Content="Trigger" Grid.Row="0" Grid.Column="0" Click="Button_Click" />
-        <WindowsFormsHost Grid.Row="1" Grid.Column="0">
-            <controls:VideoSourcePlayer x:Name="videoSourcePlayer" />
-        </WindowsFormsHost>
+        <Image Grid.Row="1" Grid.Column="0" x:Name="CurrentImage" />
+        <Label x:Name="Resolution" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1"
+               VerticalAlignment="Top" />
+        <Label x:Name="SupportsResolution" HorizontalAlignment="Left" Margin="10,41,0,0" Grid.Row="1" VerticalAlignment="Top" />
     </Grid>
 </Window>
